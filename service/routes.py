@@ -47,19 +47,19 @@ def update_account(account_id):
         "email": account.email
     })
 
-@app.route("/accounts/<int:account_id>", methods=["GET"])
-def get_account(account_id):
+# @app.route("/accounts/<int:account_id>", methods=["GET"])
+# def get_account(account_id):
 
-    account = Account.query.get(account_id)
+#     account = Account.query.get(account_id)
 
-    if not account:
-        return jsonify({"error": "Account not found"}), 404
+#     if not account:
+#         return jsonify({"error": "Account not found"}), 404
 
-    return jsonify({
-        "id": account.id,
-        "name": account.name,
-        "email": account.email
-    })
+#     return jsonify({
+#         "id": account.id,
+#         "name": account.name,
+#         "email": account.email
+#     })
 
 
 @app.route("/accounts/<int:account_id>", methods=["DELETE"])
